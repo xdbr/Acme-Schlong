@@ -304,17 +304,3 @@ Send report to website
 =back
 
 =cut
-
-=head1 AUTHOR
-
-Daniel B. <dbr@cpan.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2012 by Daniel B..
-
-This is free software, licensed under:
-
-  DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE, Version 2, December 2004
-
-=cut
