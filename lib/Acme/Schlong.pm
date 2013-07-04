@@ -91,7 +91,7 @@ class Acme::Schlong with MooseX::Getopt::Strict {
     has using_tcsh             => ( is => 'ro', isa => Bool, lazy_build => 1, documentation => q{self explanatory} );
     has using_csh              => ( is => 'ro', isa => Bool, lazy_build => 1, documentation => q{self explanatory} );
     has using_dzil             => ( is => 'ro', isa => Bool, lazy_build => 1, documentation => q{self explanatory} );
-    
+
     has pause_name             => ( is => 'ro', isa => Maybe[Str], lazy_build => 1, documentation => q{self explanatory});
     has cpan_modules           => ( is => 'ro', isa => Num,        lazy_build => 1, documentation => q[self explanatory]);
 
@@ -101,14 +101,14 @@ class Acme::Schlong with MooseX::Getopt::Strict {
     has f => ( is => 'ro', isa => 'File::Util', default => sub { File::Util->new } );
 
     # has followers_on_github =>
-    
+
     # has number_of_rc_files  =>  ~/.*rc
     # has length of .vimrc
     # has length of .emacs
     # has number of files in ~/.emacs.d
     # has using .ssh/config
     # has rvm/rbenv installed
-    # 
+    #
 
     # has number_of_modules      => ( is => 'ro', isa => Int,  lazy_build => 1, documentation => q{} );
 
@@ -176,7 +176,7 @@ class Acme::Schlong with MooseX::Getopt::Strict {
         # using_ksh
         # using_tcsh
         # using_csh
-        
+
         # say for glob (dir($self->home_directory) . '/' . '.*');
 
         $self->add_size(10)  if $self->using_zsh;
@@ -220,87 +220,3 @@ class Acme::Schlong with MooseX::Getopt::Strict {
 
 
 __END__
-=pod
-
-=encoding utf-8
-
-=head1 NAME
-
-Acme::Schlong - Fun with Acme::Schlong!
-
-=head1 VERSION
-
-version 0.001
-
-=head1 SYNOPSIS
-
-I remember, years ago, to have found one arcane incantation on the shell to calcuate your schlong size on your Linux box.
-
-I was both amazed and curious and immediately tried it on my system (which happened to be OSX and it didn't work...).
-
-Next, I tried it on the university's computers. It was way too cool.
-
-Then, years later, I have found Perl::Achievements. It's a fun module.
-
-It's a nice go-ahead-and-contribute-module. I wrote Perl::Achievements::Achievement::SchwartzianTransform for the fun of it.
-
-So here is Acme::Schlong. Go ahead, contribute!
-
-BTW: The arcane incantation was:
-
-     echo `uptime|grep days|sed 's/.*up \([0-9]*\) day.*/\1\/10+/'; cat /proc/cpuinfo|grep MHz|awk '{print $4"/30 +";}'; free|grep '^Mem' | awk '{print $3"/1024/3+"}'; df -P -k -x nfs | grep -v 1k | awk '{if ($1 ~ "/dev/(scsi|sd)"){ s+= $2} s+= $2;} END {print s/1024/50"/15+70";}'`|bc|sed 's/\(.$\)/.\1cm/'
-
-=for Pod::Coverage false true
-
-=head1 TODO
-
-=over
-
-=item *
-
-Find good ways to calculate the following:
-
-=back
-
-   * number of users logged in on the system (one user with 9 shells is 1 user.)
-   * harddisk size
-   * memory used
-   * swap used
-   * harddisk free space
-   * uptime in minutes
-   * running time in minutes
-   * average load
-
-=over
-
-=item *
-
-Find good infrastructure so that contributors can:
-
-=back
-
-   * easily extend to new metrics
-   * calculate the new schlong size
-   * all roles/subclasses are used
-
-=over
-
-=item *
-
-Build Task:: Distribution so that everybody can keep his own stuff?
-
-=item *
-
-Versioning so that you can say "By metric XYZ your schlong size is XYZ" ?
-
-=item *
-
-More robust OS-specific stuff.
-
-=item *
-
-Send report to website
-
-=back
-
-=cut
