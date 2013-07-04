@@ -1,5 +1,8 @@
 package Acme::Schlong;
 
+#  PODNAME: Acme::Schlong
+# ABSTRACT: Score the nerdiness of your system
+
 use true;
 use MooseX::Declare;
 
